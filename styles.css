@@ -1,0 +1,485 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e1f5fe; /* Light blue background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff; /* Clean white background for the content */
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern effect */
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #00796b; /* Teal color for the header */
+    text-transform: uppercase;
+}
+
+/* Description Section */
+.description {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #555; /* Darker gray for better readability */
+}
+
+/* Input Section */
+
+.input-section button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00796b; /* Teal button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #004d40; /* Darker teal */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.clear-btn {
+    transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+    background-color: #b71c1c; /* Darker red */
+    transform: scale(1.05);
+}
+
+.input-section input:focus {
+    border-color: #00796b; /* Teal border color */
+    background-color: #b2dfdb; /* Light teal background */
+    transition: all 0.3s ease;
+}
+
+.input-section input:focus::placeholder {
+    color: transparent; /* Hide placeholder text when focused */
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00796b; /* Teal color for labels */
+}
+
+.input-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #80cbc4; /* Light teal border */
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #e0f2f1; /* Light teal background for inputs */
+}
+
+.input-section button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00796b; /* Teal button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+button:focus {
+  outline: 2px solid #80cbc4;
+  outline-offset: 4px;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    background: #e0f2f1;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #00796b;
+    border-radius: 4px;
+}
+
+
+input {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #004d40;
+  background-color: #ffffff;
+}
+
+/* Result Section */
+.result-section {
+    margin-bottom: 30px;
+    background-color: #f1f8e9; /* Light green background for result sections */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.result-section h2 {
+    font-size: 20px;
+    color: #00695c; /* Darker teal for section titles */
+}
+
+.result-section p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333; /* Standard dark text for paragraphs */
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #555; /* Dark gray for the footer text */
+    margin-top: 30px;
+}
+
+footer a {
+    color: #00796b; /* Teal color for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .input-section input,
+    .input-section button {
+        font-size: 14px;
+    }
+
+    .result-section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .input-section input,
+    .input-section button {
+        font-size: 12px;
+    }
+
+    .result-section p {
+        font-size: 12px;
+    }
+}
+
+
+
+/* Style for Introductory Message with Emojis */
+.intro-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00897b; /* Lush green color for a fresh look */
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 24px; /* Larger font size for better visibility */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+    z-index: 1000;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Add a slight bounce effect after fade-in */
+.intro-message.bounce {
+    animation: bounce 0.5s ease-in-out 1;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+/* Add some styling for emojis to make them pop */
+.intro-message p {
+    font-size: 26px; /* Larger size for the message */
+}
+
+.intro-message p span {
+    font-size: 40px; /* Larger emoji size */
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro-message p span:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00796b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #004d40;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .container {
+  background-color: #444;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Add margin to the button and align in the center */
+#dark-mode-toggle {
+    padding: 15px 30px; /* Increase padding for a larger button */
+    font-size: 18px; /* Larger font size for better readability */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50px; /* Fully rounded corners */
+    background: linear-gradient(135deg, #00796b, #004d40); /* Gradient from teal to dark teal */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+    margin: 20px 0; /* Add margin on top and bottom for spacing */
+    text-align: center; /* Center text inside button */
+    width: 250px; /* Set a fixed width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    display: block; /* Make the button block-level */
+    margin-left: auto; /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
+}
+
+/* Button Hover Effect */
+#dark-mode-toggle:hover {
+    background: linear-gradient(135deg, #004d40, #00796b); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Lift the button slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Clear Data Button Animation */
+.clear-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #d32f2f; /* Red button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease; /* Smooth transition for color, transform, etc. */
+}
+
+/* Hover Effect with Animation */
+.clear-btn:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Click Animation */
+.clear-btn:active {
+    transform: scale(0.95); /* Shrink the button on click */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+    transition: all 0.1s ease; /* Quick transition for the shrink effect */
+}
+
+
+/* Center Align the Clear Data Button */
+#clear-btn {
+    width: 80%; /* Or any width you prefer */
+    padding: 12px;
+    background-color: #d32f2f; /* Red button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px auto; /* Horizontal margin set to auto to center the button */
+    display: block; /* Makes the button a block-level element */
+    text-align: center; /* Centers the text inside the button */
+}
+
+#clear-btn:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+#clear-btn:active {
+    transform: scale(0.95); /* Shrink the button on click */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}
+
+#share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00796b;  /* Teal color for the button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin: 20px auto; /* Centering the button and adding margin */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;
+  text-align: center;
+}
+
+#share-btn:hover {
+  background-color: #004d40; /* Darker teal on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#share-btn i {
+  margin-right: 8px; /* Space between the icon and text */
+  font-size: 18px; /* Size of the share icon */
+}
+
+#share-btn:focus {
+  outline: none; /* Remove the outline on focus for better appearance */
+}
+
+/* About Us Section Styles */
+.about-us-section {
+  display: none; /* Hidden by default */
+  background-color: #f4f4f9;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-us-section h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-us-section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#close-about-us-btn {
+  display: block;
+  background-color: #00796b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#close-about-us-btn:hover {
+  background-color: #004d40;
+}
+
+/* Button Styles */
+#about-us-btn {
+  background-color: #00796b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+#about-us-btn:hover {
+  background-color: #004d40;
+}
